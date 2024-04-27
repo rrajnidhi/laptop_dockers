@@ -5,6 +5,7 @@ RUN apt-get update; apt-get -y install \
         python3-pip \
         vim \
         tmux \
+        tmuxinator \
         iputils-ping \
         git \
         ;
@@ -22,6 +23,6 @@ RUN apt-get update; apt-get -y install \
 RUN touch ~/.tmux.conf; echo "bind k kill-session" >> ~/.tmux.conf
 
 # Finally the command
-COPY entrypoint_new.sh /
-RUN chmod +x /entrypoint_new.sh
-ENTRYPOINT /entrypoint_new.sh
+COPY entrypoint.sh /
+RUN chmod +x /entrypoint.sh
+ENTRYPOINT /entrypoint.sh

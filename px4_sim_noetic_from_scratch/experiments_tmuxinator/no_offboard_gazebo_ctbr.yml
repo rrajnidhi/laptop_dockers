@@ -1,0 +1,26 @@
+name: single_gazebo
+root: ../../
+
+
+pre_window:                             
+  - source /opt/ros/noetic/setup.bash
+
+windows:
+  - simulation:
+      layout: tiled
+      panes:
+        - cd /app/PX4-Autopilot ; source Tools/simulation/gazebo-classic/setup_gazebo.bash pwd /build_posix_sitl_default ; source Tools/simulation/gazebo-classic/setup_gazebo.bash pwd /app/PX4-Autopilot/build/px4_sitl_default ; export ROS_PACKAGE_PATH=$ROS_PACKAGE_PATH:/app/PX4-Autopilot ; export ROS_PACKAGE_PATH=$ROS_PACKAGE_PATH:/app/PX4-Autopilot/Tools/simulation/gazebo-classic/sitl_gazebo-classic ; roslaunch px4 mavros_posix_sitl.launch
+  - extra1:
+      layout: tiled
+      panes:
+        - sleep 3
+  - extra2:
+      layout: tiled
+      panes:
+        - sleep 3
+  - extra3:
+      layout: tiled
+      panes:
+        - sleep 2
+
+            

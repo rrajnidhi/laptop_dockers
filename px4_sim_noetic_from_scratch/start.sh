@@ -13,10 +13,12 @@ docker run -it --rm \
     --workdir="/app" \
     --volume="/home/nidhi/PX4-Autopilot:/app/PX4-Autopilot" \
     --volume="/home/nidhi/catkin_ws:/app/catkin_ws" \
+    --volume="/home/nidhi/laptop_dockers/px4_sim_noetic_from_scratch/experiments_tmuxinator:/app/experiments_tmuxinator" \
     --volume="/dev:/dev" \
     --network host \
     $IMAGE_NAME \
     "$@"
+    
 
 xhost -local:root > /dev/null
  
